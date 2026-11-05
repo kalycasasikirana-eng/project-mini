@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="header">
+            <div>
+                <p class="eyebrow">PRODUCTIVITY APP</p>
+                <h1>Daftar Tugas</h1>
+                <p class="subtitle">Atur kegiatanmu, selesaikan satu per satu.</p>
+            </div>
+            <div class="header-icon">✓</div>
+        </header>
+
+        <section class="add-card">
+            <h2>Tambah Tugas Baru</h2>
+
+            <form id="todoForm">
+                <input type="text" id="taskInput"
+                    placeholder="Contoh: Mengerjakan tugas JavaScript..."
+                    required>
+
+                <button type="submit" id="addButton">
+                    + Tambah Tugas
+                </button>
+            </form>
+
+            <p id="formMessage" class="form-message"></p>
+        </section>
+
+        <section class="list-section">
+            <div class="list-heading">
+                <div>
+                    <h2>Daftar Tugas</h2>
+                    <p class="list-subtitle">
+                        Berikut tugas yang perlu kamu kerjakan.
+                    </p>
+                </div>
+
+                <span id="taskCount" class="count">0 tugas</span>
+            </div>
+
+            <nav class="filters">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="done">Selesai</button>
+                <button class="filter-btn" data-filter="undone">Belum Selesai</button>
+            </nav>
+
+            <div id="loading" class="message">Memuat...</div>
+
+            <div id="error" class="message error hidden">
+                Gagal mengambil data. Periksa koneksi internet.
+            </div>
+
+            <ul id="todoList" class="todo-list"></ul>
+
+            <div id="emptyMessage" class="message hidden">
+                Belum ada tugas pada kategori ini.
+            </div>
+        </section>
+
+        <footer>
+            To-Do Online · HTML, CSS, dan JavaScript
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
